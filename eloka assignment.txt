@@ -1,7 +1,17 @@
 class NotesApplication () {
+	/**
+	*
+	* A class that takes in a parameter 
+	* Creates a list
+	**/
 	constructor (author) {
 	this.author = author;
 	this.notes = [];
 	}
 
+	function create(note_content) {
+	    this.ntoes.push(note_content);
+	}
+
 	
+		
