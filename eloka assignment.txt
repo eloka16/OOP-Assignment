@@ -20,4 +20,9 @@ class NotesApplication {
 	   	console.log("By author " + this.author);
 	    }
 	}
+	get(note_id) {
+		for (i=0; i<this.notes.length; i++) {
+			return str(this.notes[i]);
+		}
+	}
 }  
