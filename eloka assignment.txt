@@ -1,0 +1,23 @@
+class NotesApplication {
+	/**
+	*
+	* A class that takes in a parameter 
+	* Creates a list
+	**/
+	constructor (author) {
+		this.author = author;
+		this.notes = [];
+	}
+
+	create(note_content) {
+	    this.notes.push(note_content);
+	}
+
+	list(){
+	    for ( i = 0; i < this.notes.length; i++) {		
+	   	console.log(i);
+	   	console.log(this.note[i]);
+	   	console.log("By author " + this.author);
+	    }
+	}
+}  
