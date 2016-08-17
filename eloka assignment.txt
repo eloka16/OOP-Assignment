@@ -24,14 +24,26 @@ class NotesApplication {
 	
 	
 	get(note_id) {
-		for (i=0; i<this.notes.length; i++) {
-			return this.notes[note_id];
+		for (let i=0; i<this.notes.length; i++) {
+			return this.notes[i];
 		}
 	}
 	
 	
-		
-	delet(note_id) {	
+	search(search_text) {
+		for (let i = 0; i < this.notes.length; i++) {
+			if (search_text in this.notes.length[i]) {
+				 a = "Showing results for search" + this.search_text;
+				 b = this.notes[i];
+				 c = "Arthor " + this.arthor;
+				 return a + b + c;
+				
+			}
+		}
+	}
+ 
+	
+	delete(note_id) {	
 		delete this.notes[note_id];
 		}  
 	
