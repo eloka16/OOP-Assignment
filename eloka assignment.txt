@@ -10,8 +10,14 @@ class NotesApplication () {
 	}
 
 	function create(note_content) {
-	    this.ntoes.push(note_content);
+	    this.notes.push(note_content);
 	}
 
-	
+	function list(){
+	    for (const i = 0; i < this.notes.length; i++) {		
+	   	 console.log(i)
+	   	 console.log(this.note[i])
+	   	 console.log("By author " + this.author)
+	}
+}  
 		
