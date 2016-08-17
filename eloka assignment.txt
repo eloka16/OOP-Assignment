@@ -1,23 +1,28 @@
-class NotesApplication () {
+class NotesApplication {
 	/**
 	*
 	* A class that takes in a parameter 
 	* Creates a list
 	**/
 	constructor (author) {
-	this.author = author;
-	this.notes = [];
+		this.author = author;
+		this.notes = [];
 	}
 
-	function create(note_content) {
+	create(note_content) {
 	    this.notes.push(note_content);
 	}
 
-	function list(){
-	    for (const i = 0; i < this.notes.length; i++) {		
-	   	 console.log(i)
-	   	 console.log(this.note[i])
-	   	 console.log("By author " + this.author)
+	list(){
+	    for ( i = 0; i < this.notes.length; i++) {		
+	   	console.log(i);
+	   	console.log(this.note[i]);
+	   	console.log("By author " + this.author);
+	    }
+	}
+	get(note_id) {
+		for (i=0; i<this.notes.length; i++) {
+			return str(this.notes[i]);
+		}
 	}
 }  
-		
