@@ -28,3 +28,14 @@ class NotesApplication {
 			return this.notes[note_id];
 		}
 	}
+	
+	
+		
+	delet(note_id) {	
+		delete this.notes[note_id];
+		}  
+	
+	edit(notes_id, new_content) {
+		this.note[note_id] = new_content;
+		}
+}
