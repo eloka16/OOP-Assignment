@@ -13,16 +13,18 @@ class NotesApplication {
 	    this.notes.push(note_content);
 	}
 
+	
 	list(){
-	    for ( i = 0; i < this.notes.length; i++) {		
+	    for (let i = 0; i < this.notes.length; i++) {		
 	   	console.log(i);
 	   	console.log(this.note[i]);
 	   	console.log("By author " + this.author);
 	    }
 	}
+	
+	
 	get(note_id) {
 		for (i=0; i<this.notes.length; i++) {
-			return str(this.notes[i]);
+			return this.notes[note_id];
 		}
 	}
-}  
