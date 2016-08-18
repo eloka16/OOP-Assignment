@@ -1,0 +1,23 @@
+{
+  "name": "oop-assignment",
+  "version": "1.0.0",
+  "description": "A note taking app",
+  "main": "notesapp.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eloka16/OOP-Assignment.git"
+  },
+  "author": "henry chukwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eloka16/OOP-Assignment/issues"
+  },
+  "homepage": "https://github.com/eloka16/OOP-Assignment#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
