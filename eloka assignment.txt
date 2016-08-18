@@ -11,43 +11,44 @@ class NotesApplication {
 
 	create(note_content) {
 	    this.notes.push(note_content);
+	    return this.notes;
 	}
-
-	
-	list(){
-	    for (let i = 0; i < this.notes.length; i++) {		
-	   	console.log(i);
-	   	console.log(this.note[i]);
-	   	console.log("By author " + this.author);
+	listNotes(){
+	    for (let i = 0; i < this.notes.length; i++) {
+	   		console.log(i);
+	   		console.log(this.notes[i]);
+	   		console.log("By author " + this.author);
 	    }
 	}
-	
-	
 	get(note_id) {
 		for (let i=0; i<this.notes.length; i++) {
-			return this.notes[i];
+			return this.notes[note_id];
 		}
 	}
-	
-	
 	search(search_text) {
 		for (let i = 0; i < this.notes.length; i++) {
-			if (search_text in this.notes.length[i]) {
-				 a = "Showing results for search" + this.search_text;
-				 b = this.notes[i];
-				 c = "Arthor " + this.arthor;
-				 return a + b + c;
-				
+			if (this.notes[i].indexOf(search_text)) {
+				 return "Showing results for search " + search_text;
 			}
 		}
 	}
- 
-	
 	delete(note_id) {	
 		delete this.notes[note_id];
 		}  
 	
-	edit(notes_id, new_content) {
-		this.note[note_id] = new_content;
+	edit(note_id, new_content) {
+		this.notes[note_id] = new_content;
 		}
 }
+
+let book = new NotesApplication("Henry");
+book.create("Lorem");
+book.create("Ipsum");
+book.create("I came home");
+book.listNotes();
+book.get(1);
+book.edit(1,"Tayo");
+book.listNotes();
+book.delete(1);
+book.listNotes();
+book.search("came");
