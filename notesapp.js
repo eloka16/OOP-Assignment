@@ -4,7 +4,7 @@ module.exports = function (author){
 	this.author = author;
 	this.notes = [];
 	this.create = create;
-	}
+	this.listNotes = listNote;
 	/** New function added to the class
 	* to check if author was Defined
 	*/
@@ -20,19 +20,20 @@ module.exports = function (author){
 		return "successful";
 		this.note.push(note_content);{return this.notes;}
 	}
-	this.listNotes = function(){
+	function listNote(){
 		/** listNotes() - This function list
 		* the index of the note_content in the note list
 		* the content of the note
 		* the author
-		*/
-	    for (let i = 0; i < this.notes.length; i++) {
+		*/	
+	    for (var i = 0; i < this.notes.length; i++) {
 	   		console.log(i);
 	   		console.log(this.notes[i]);
 	   		console.log("By author " + this.author);
 	    }
 	}
 	this.get = function(note_id) {
+		if (note_id.constructor === String) return 'sorry, input incorrect';
 		for (let i=0; i<this.notes.length; i++) {
 			return this.notes[note_id];
 		}
@@ -51,5 +52,5 @@ module.exports = function (author){
 	this.edit = function(note_id, new_content) {
 		this.notes[note_id] = new_content;
 		}
-
+}
 
