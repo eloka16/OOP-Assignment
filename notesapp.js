@@ -39,7 +39,7 @@ module.exports = function (author){
 		}
 	}
 	this.search = function(search_text) {
-		for (let i = 0; i < this.notes.length; i++) {
+		for (var i = 0; i < this.notes.length; i++) {
 			if (this.notes[i].indexOf(search_text)) {
 				 return "Showing results for search " + search_text;
 			}
@@ -53,4 +53,3 @@ module.exports = function (author){
 		this.notes[note_id] = new_content;
 		}
 }
-
