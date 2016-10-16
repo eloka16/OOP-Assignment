@@ -38,10 +38,10 @@ module.exports = function (author){
 			return this.notes[note_id];
 		}
 	}
-	this.search = function(search_text) {
-		for (var i = 0; i < this.notes.length; i++) {
-			if (this.notes[i].indexOf(search_text)) {
-				 return "Showing results for search " + search_text;
+		search(search_text) {
+		for (let i = 0; i < this.notes.length; i++) {
+			if (this.notes[i].indexOf(search_text) > 0) {
+				return "Showing results for search " + search_text + " in " + this.notes[i];
 			}
 		}
 	}
